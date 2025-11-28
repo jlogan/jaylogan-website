@@ -188,6 +188,36 @@ const Hero = () => {
               >
                 <span className="text-xl">🚀</span> Full-Stack Ready
               </motion.div>
+
+              {/* New "Web Design Professional" Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  y: [0, 15, 0], // Opposite vertical movement
+                  x: [0, -5, 0]  // Opposite horizontal movement
+                }}
+                transition={{ 
+                  delay: 1.2, // Slightly later delay
+                  duration: 0.6,
+                  y: {
+                    duration: 3.5, // Different duration for variety
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    repeatType: "reverse"
+                  },
+                  x: {
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    repeatType: "reverse"
+                  }
+                }}
+                className="absolute bottom-10 -left-12 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+              >
+                <span className="text-xl">🎨</span> Web Design Pro
+              </motion.div>
             </div>
           </motion.div>
         </div>
