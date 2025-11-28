@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Github, ArrowRight } from "lucide-react";
+import jayPhoto from "@/assets/jay-logan.jpeg";
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-block"
             >
-              <span className="text-primary text-sm font-semibold tracking-wider uppercase border border-primary/30 px-4 py-2 rounded-full bg-primary/5">
+              <span className="text-accent text-sm font-semibold tracking-wider uppercase border border-accent/30 px-4 py-2 rounded-full bg-accent/5">
                 Available for Projects
               </span>
             </motion.div>
@@ -57,14 +58,14 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg" className="group bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group border-primary/30 hover:bg-primary/10"
+                className="group border-primary/50 hover:bg-primary/10 hover:border-primary"
               >
                 <Github className="mr-2 h-5 w-5" />
                 Explore GitHub
@@ -78,11 +79,11 @@ const Hero = () => {
               className="flex gap-8 pt-8 border-t border-border/50"
             >
               <div>
-                <div className="text-3xl font-bold text-primary">25+</div>
+                <div className="text-3xl font-bold text-accent">25+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary">100+</div>
+                <div className="text-3xl font-bold text-primary">100+</div>
                 <div className="text-sm text-muted-foreground">Projects Delivered</div>
               </div>
             </motion.div>
@@ -97,16 +98,17 @@ const Hero = () => {
           >
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Glowing border effect */}
-              <div className="absolute inset-0 bg-gradient-accent rounded-2xl blur-2xl opacity-20" />
+              <div className="absolute inset-0 bg-gradient-accent rounded-2xl blur-3xl opacity-20" />
               
               {/* Photo container */}
-              <div className="relative rounded-2xl overflow-hidden border-2 border-primary/20 bg-card">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-6xl mb-4">👨🏿‍💻</div>
-                    <p className="text-muted-foreground">Professional photo placeholder</p>
-                  </div>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden border-2 border-accent/30 bg-card shadow-premium hover-lift">
+                <img 
+                  src={jayPhoto} 
+                  alt="Jay Logan" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Subtle vignette overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/20" />
               </div>
 
               {/* Floating badge */}
@@ -114,7 +116,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1, duration: 0.6 }}
-                className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold shadow-lg"
+                className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-premium"
               >
                 🚀 Full-Stack Ready
               </motion.div>

@@ -49,9 +49,9 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden bg-muted/30">
+    <section className="py-24 px-4 relative overflow-hidden bg-gradient-warm">
       {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
@@ -80,9 +80,9 @@ const Portfolio = () => {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl overflow-hidden h-full flex flex-col hover:border-primary/50 transition-all duration-300">
+              <div className="bg-card border border-border rounded-xl overflow-hidden h-full flex flex-col hover:border-accent/50 transition-all duration-300 hover-lift shadow-md">
                 {/* Project thumbnail */}
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-4xl opacity-50">💼</div>
@@ -119,7 +119,7 @@ const Portfolio = () => {
                     </Button>
                     <Button 
                       size="sm" 
-                      className="flex-1 bg-primary hover:bg-primary/90"
+                      className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />

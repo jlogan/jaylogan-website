@@ -44,7 +44,7 @@ const Skills = () => {
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
@@ -73,7 +73,7 @@ const Skills = () => {
               whileHover={{ y: -8 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-primary/50 transition-all duration-300">
+              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-accent/50 transition-all duration-300 hover-lift shadow-md">
                 <div className={`w-12 h-12 rounded-lg bg-${skill.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <skill.icon className={`w-6 h-6 text-${skill.color}`} />
                 </div>

@@ -44,8 +44,8 @@ const GitHub = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-            <Github className="w-8 h-8 text-primary" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6">
+            <Github className="w-8 h-8 text-accent" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Open Source <span className="gradient-text">Contributions</span>
@@ -57,7 +57,7 @@ const GitHub = () => {
           <Button 
             variant="outline"
             size="lg"
-            className="border-primary/30 hover:bg-primary/10"
+            className="border-accent/50 hover:bg-accent/10 hover:border-accent"
             onClick={() => window.open('https://github.com', '_blank')}
           >
             <Github className="mr-2 h-5 w-5" />
@@ -76,9 +76,9 @@ const GitHub = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-primary/50 transition-all duration-300 cursor-pointer">
+              <div className="bg-card border border-border rounded-xl p-6 h-full hover:border-accent/50 transition-all duration-300 cursor-pointer hover-lift shadow-md">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
                     {repo.name}
                   </h3>
                   <span className="text-xs px-2 py-1 bg-muted rounded-md">
@@ -110,9 +110,9 @@ const GitHub = () => {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-full">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-full shadow-md">
             <span className="text-muted-foreground">Total contributions:</span>
-            <span className="text-2xl font-bold text-primary">1,247+</span>
+            <span className="text-2xl font-bold text-accent">1,247+</span>
             <span className="text-muted-foreground">in the last year</span>
           </div>
         </motion.div>
