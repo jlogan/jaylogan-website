@@ -24,18 +24,18 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-card border border-border rounded-2xl p-8 md:p-12"
+          className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-premium"
         >
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              With over <span className="text-primary font-semibold">25 years of experience</span> in 
+              With over <span className="text-accent font-semibold">25 years of experience</span> in
               web technology, I've built my career on turning complex problems into elegant digital solutions. 
               From the early days of web development to today's cutting-edge frameworks, I've continuously 
               evolved my skills to stay at the forefront of technology.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              My journey has taken me through <span className="text-secondary font-semibold">agencies, 
+              My journey has taken me through <span className="text-primary font-semibold">agencies,
               startups, and independent projects</span>, where I've worn many hats—developer, architect, 
               project manager, and technical leader. This diverse experience gives me a unique perspective 
               on building products that not only work technically but also succeed in the real world.
