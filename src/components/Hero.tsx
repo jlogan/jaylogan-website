@@ -84,7 +84,7 @@ const Hero = () => {
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">100+</div>
+                <div className="text-3xl font-bold text-primary">1000+</div>
                 <div className="text-sm text-muted-foreground">Projects Delivered</div>
               </div>
             </motion.div>
