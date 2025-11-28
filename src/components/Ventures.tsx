@@ -39,7 +39,7 @@ const Ventures = () => {
               whileHover={{ scale: 1.05 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-xl p-6 aspect-square flex flex-col items-center justify-center hover:border-primary/30 transition-all duration-300">
+              <div className="bg-card border border-border rounded-xl p-6 aspect-square flex flex-col items-center justify-center hover:border-accent/30 transition-all duration-300 hover-lift shadow-md">
                 <div className="text-4xl mb-2">{venture.logo}</div>
                 <p className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors">
                   {venture.name}
