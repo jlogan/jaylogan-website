@@ -59,13 +59,17 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Archivo Black', 'sans-serif'],
-        sans: ['Sora', 'sans-serif'],
-        body: ['Manrope', 'sans-serif'],
+        display: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
+        'gradient-warm': 'var(--gradient-warm)',
+      },
+      boxShadow: {
+        'premium': 'var(--shadow-premium)',
       },
       borderRadius: {
         lg: "var(--radius)",

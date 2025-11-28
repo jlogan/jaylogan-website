@@ -82,7 +82,7 @@ const Contact = () => {
                   className="bg-card border-border resize-none"
                 />
               </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
+              <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" size="lg">
                 <Send className="mr-2 h-5 w-5" />
                 Send Message
               </Button>
@@ -97,7 +97,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="bg-card border border-border rounded-xl p-6">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
               <p className="text-muted-foreground mb-6">
                 I'm always interested in hearing about new projects and opportunities. 
@@ -107,10 +107,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <a 
                   href="mailto:jay@jaylogan.com"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Mail className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <Mail className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-foreground">Email</p>
@@ -122,10 +122,10 @@ const Contact = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Linkedin className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <Linkedin className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-foreground">LinkedIn</p>
@@ -135,9 +135,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-accent rounded-xl p-6 text-primary-foreground">
-              <h4 className="font-semibold mb-2">Response Time</h4>
-              <p className="text-sm opacity-90">
+            <div className="bg-accent/10 border border-accent/30 rounded-xl p-6">
+              <h4 className="font-semibold mb-2 text-accent">Response Time</h4>
+              <p className="text-sm text-muted-foreground">
                 I typically respond to messages within 24-48 hours during business days.
               </p>
             </div>
