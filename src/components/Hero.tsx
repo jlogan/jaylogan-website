@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <motion.div 
           animate={floatAnimation}
-          className="absolute top-20 left-[10%] text-accent/20"
+          className="absolute top-10 left-[45%] text-accent/20"
         >
           <Code size={64} />
         </motion.div>
@@ -35,19 +35,19 @@ const Hero = () => {
         </motion.div>
         <motion.div 
           animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 4 } }}
-          className="absolute top-40 right-[20%] text-muted-foreground/10"
+          className="absolute top-20 right-[15%] text-muted-foreground/10"
         >
           <Layout size={56} />
         </motion.div>
         <motion.div 
           animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 1 } }}
-          className="absolute bottom-20 left-[20%] text-accent/10"
+          className="absolute bottom-32 left-[2%] text-accent/10"
         >
           <Globe size={72} />
         </motion.div>
         <motion.div 
           animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 3 } }}
-          className="absolute top-1/2 left-[-2%] text-primary/10"
+          className="absolute top-[40%] left-[-2%] text-primary/10"
         >
           <Cpu size={96} />
         </motion.div>
