@@ -66,6 +66,7 @@ const Hero = () => {
                 size="lg" 
                 variant="outline" 
                 className="group border-primary/50 hover:bg-primary/10 hover:border-primary"
+                onClick={() => window.open('https://github.com/jlogan', '_blank')}
               >
                 <Github className="mr-2 h-5 w-5" />
                 Explore GitHub
