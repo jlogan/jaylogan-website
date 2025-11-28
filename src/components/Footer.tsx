@@ -14,7 +14,7 @@ const Footer = () => {
 
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/jlogan"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-accent hover:text-accent transition-all"
