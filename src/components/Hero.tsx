@@ -214,7 +214,7 @@ const Hero = () => {
                     repeatType: "reverse"
                   }
                 }}
-                className="absolute bottom-10 -left-12 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+                className="absolute top-12 -left-8 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
               >
                 <span className="text-xl">🎨</span> Web Design Pro
               </motion.div>
