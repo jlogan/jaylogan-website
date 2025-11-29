@@ -184,9 +184,9 @@ const Hero = () => {
                     repeatType: "reverse"
                   }
                 }}
-                className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+                className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-premium z-20"
               >
-                <span className="text-xl">🚀</span> Full-Stack Ready
+                Full-Stack Ready
               </motion.div>
 
               {/* New "Web Design Professional" Floating badge */}
@@ -214,9 +214,9 @@ const Hero = () => {
                     repeatType: "reverse"
                   }
                 }}
-                className="absolute top-12 -left-8 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+                className="absolute top-12 -left-8 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20"
               >
-                <span className="text-xl">🎨</span> Web Design Pro
+                Web Design Pro
               </motion.div>
             </div>
           </motion.div>
