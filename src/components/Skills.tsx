@@ -87,7 +87,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group perspective-1000"
+                className="h-[250px]"
                 style={{ perspective: "1000px" }}
               >
                 <motion.div
@@ -107,11 +107,11 @@ const Skills = () => {
                       WebkitBackfaceVisibility: "hidden"
                     }}
                   >
-                    <div className="flex flex-col items-center justify-center h-full text-center min-h-[200px]">
-                      <div className={`w-16 h-16 rounded-lg bg-${skill.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <div className="flex flex-col items-center justify-center h-full text-center">
+                      <div className={`w-16 h-16 rounded-lg bg-${skill.color}/10 flex items-center justify-center mb-4 transition-transform`}>
                         <skill.icon className={`w-8 h-8 text-${skill.color}`} />
                       </div>
-                      <h3 className="text-2xl font-bold">{skill.title}</h3>
+                      <h3 className="text-xl font-bold">{skill.title}</h3>
                     </div>
                   </div>
 
@@ -124,8 +124,8 @@ const Skills = () => {
                       transform: "rotateY(180deg)"
                     }}
                   >
-                    <div className="flex items-center justify-center h-full min-h-[200px]">
-                      <p className="text-muted-foreground text-center text-lg">{skill.description}</p>
+                    <div className="flex items-center justify-center h-full px-2">
+                      <p className="text-muted-foreground text-center">{skill.description}</p>
                     </div>
                   </div>
                 </motion.div>
