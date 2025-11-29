@@ -88,7 +88,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6"
+            className="space-y-6 relative z-20"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative"
+            className="relative z-0"
           >
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Glowing border effect */}
