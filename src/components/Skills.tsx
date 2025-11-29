@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Layers, Wrench, Sparkles, Brain, Rocket } from "lucide-react";
+import { Code2, Layers, Wrench, Sparkles, Brain, Rocket, Smartphone, Palette, Briefcase, UserCog } from "lucide-react";
 
 const skills = [
   {
@@ -33,9 +33,27 @@ const skills = [
     color: "secondary"
   },
   {
-    icon: Sparkles,
-    title: "AI-Assisted Development",
-    description: "Leveraging modern AI tools for rapid, quality development",
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description: "Cross-platform mobile apps with Flutter and React Native",
+    color: "accent"
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    description: "User-centered design and prototyping using Figma",
+    color: "primary"
+  },
+  {
+    icon: Briefcase,
+    title: "Product Designer & Owner",
+    description: "Strategic product design and ownership from concept to market",
+    color: "secondary"
+  },
+  {
+    icon: UserCog,
+    title: "Fractional CTO Services",
+    description: "Strategic technical leadership on a flexible, part-time basis",
     color: "accent"
   }
 ];
@@ -94,7 +112,32 @@ const Skills = () => {
         >
           <p className="text-sm text-muted-foreground mb-4">Technologies I work with</p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['React', 'Next.js', 'TypeScript', 'Node.js', 'WordPress', 'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'AWS', 'Git'].map((tech) => (
+            {[
+              'AWS',
+              'ChatGPT',
+              'Claude',
+              'CodeIgniter',
+              'Cursor',
+              'Digital Ocean',
+              'Figma',
+              'Flutter',
+              'Git',
+              'GitHub Copilot',
+              'Laravel',
+              'MongoDB',
+              'Next.js',
+              'Node.js',
+              'PHP',
+              'PostgreSQL',
+              'React',
+              'React Native',
+              'Supabase',
+              'Tailwind CSS',
+              'TypeScript',
+              'Vercel',
+              'WordPress',
+              'Xcode'
+            ].map((tech) => (
               <span 
                 key={tech}
                 className="px-4 py-2 bg-muted rounded-full text-sm font-medium hover:bg-muted/70 transition-colors"
