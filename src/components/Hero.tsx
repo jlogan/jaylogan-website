@@ -4,15 +4,6 @@ import { Github, ArrowRight, Code, Database, Layout, Globe, Cpu } from "lucide-r
 import jayPhoto from "@/assets/jay-logan.jpeg";
 
 const Hero = () => {
-  // Floating animation for background elements
-  const floatAnimation = {
-    y: [0, -15, 0],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
@@ -22,31 +13,65 @@ const Hero = () => {
       {/* Floating Tech Icons Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <motion.div 
-          animate={floatAnimation}
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop" as const,
+            ease: "easeInOut"
+          }}
           className="absolute top-10 left-[45%] text-accent/20"
         >
           <Code size={64} />
         </motion.div>
         <motion.div 
-          animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 2 } }}
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop" as const,
+            ease: "easeInOut",
+            delay: 2
+          }}
           className="absolute bottom-40 right-[5%] text-primary/20"
         >
           <Database size={80} />
         </motion.div>
         <motion.div 
-          animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 4 } }}
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop" as const,
+            ease: "easeInOut",
+            delay: 4
+          }}
           className="absolute top-20 right-[15%] text-muted-foreground/10"
         >
           <Layout size={56} />
         </motion.div>
         <motion.div 
-          animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 1 } }}
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop" as const,
+            ease: "easeInOut",
+            delay: 1
+          }}
           className="absolute bottom-32 left-[2%] text-accent/10"
         >
           <Globe size={72} />
         </motion.div>
         <motion.div 
-          animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 3 } }}
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop" as const,
+            ease: "easeInOut",
+            delay: 3
+          }}
           className="absolute top-[40%] left-[-2%] text-primary/10"
         >
           <Cpu size={96} />
@@ -159,7 +184,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/20" />
               </div>
 
-              {/* Floating badge */}
+              {/* Floating badge - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ 
@@ -170,53 +195,53 @@ const Hero = () => {
                 }}
                 transition={{ 
                   delay: 1, 
-                  duration: 0.6, // Initial entrance
+                  duration: 0.6,
                   y: {
                     duration: 3,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    repeatType: "reverse"
+                    repeatType: "reverse" as const
                   },
                   x: {
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    repeatType: "reverse"
+                    repeatType: "reverse" as const
                   }
                 }}
-                className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+                className="hidden md:flex absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-premium z-20 items-center gap-2"
               >
-                <span className="text-xl">🚀</span> Full-Stack Ready
+                Full-Stack Ready
               </motion.div>
 
-              {/* New "Web Design Professional" Floating badge */}
+              {/* New "Web Design Professional" Floating badge - Hidden on mobile */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: [0, 15, 0], // Opposite vertical movement
-                  x: [0, -5, 0]  // Opposite horizontal movement
+                  y: [0, 15, 0],
+                  x: [0, -5, 0]
                 }}
                 transition={{ 
-                  delay: 1.2, // Slightly later delay
+                  delay: 1.2,
                   duration: 0.6,
                   y: {
-                    duration: 3.5, // Different duration for variety
+                    duration: 3.5,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    repeatType: "reverse"
+                    repeatType: "reverse" as const
                   },
                   x: {
                     duration: 4.5,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    repeatType: "reverse"
+                    repeatType: "reverse" as const
                   }
                 }}
-                className="absolute top-12 -left-8 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 flex items-center gap-2"
+                className="hidden md:flex absolute top-12 -left-8 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-bold shadow-premium z-20 items-center gap-2"
               >
-                <span className="text-xl">🎨</span> Web Design Pro
+                Web Design Pro
               </motion.div>
             </div>
           </motion.div>
