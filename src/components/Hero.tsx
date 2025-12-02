@@ -222,22 +222,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
-      {/* Scroll indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ delay: 2, duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground"
-      >
-        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-1">
-          <motion.div 
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-2 bg-accent rounded-full"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 };
