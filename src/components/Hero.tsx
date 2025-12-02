@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Github, ArrowRight, Code, Database, Layout, Globe, Cpu } from "lucide-react";
+import { FileText, ArrowRight, Code, Database, Layout, Globe, Cpu } from "lucide-react";
 import jayPhoto from "@/assets/jay-logan.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   // Floating animation for background elements
   const floatAnimation = {
     y: [0, -15, 0],
@@ -11,6 +13,13 @@ const Hero = () => {
       duration: 6,
       repeat: Infinity,
       ease: "easeInOut"
+    }
+  };
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -105,7 +114,11 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <Button size="lg" className="group bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+              <Button 
+                size="lg" 
+                className="group bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                onClick={scrollToProjects}
+              >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -113,10 +126,10 @@ const Hero = () => {
                 size="lg" 
                 variant="outline" 
                 className="group border-primary/50 hover:bg-primary/10 hover:border-primary"
-                onClick={() => window.open('https://github.com/jlogan', '_blank')}
+                onClick={() => navigate('/resume')}
               >
-                <Github className="mr-2 h-5 w-5" />
-                Explore GitHub
+                <FileText className="mr-2 h-5 w-5" />
+                View Resume
               </Button>
             </motion.div>
 
