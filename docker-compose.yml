@@ -1,0 +1,17 @@
+name: jaylogan
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jaylogan
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
