@@ -74,7 +74,7 @@ const Resume = () => {
                 </div>
                 <div className="flex items-center gap-2 print:flex hidden">
                   <Phone size={16} className="print:w-3 print:h-3" />
-                  404-593-7102
+                  425-475-2370
                 </div>
                 <div className="flex items-center gap-2 print:flex hidden">
                   <Mail size={16} className="print:w-3 print:h-3" />
