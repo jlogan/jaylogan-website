@@ -18,9 +18,9 @@ const Contact = () => {
   const contactMethods = [
     {
       icon: <Phone className="w-5 h-5" />,
-      label: "Call / SMS / WhatsApp",
-      value: "404-593-7102",
-      href: "tel:4045937102",
+      label: "Call / SMS",
+      value: "425-475-2370",
+      href: "tel:4254752370",
       color: "hover:text-green-500",
       bg: "hover:bg-green-500/10"
     },
