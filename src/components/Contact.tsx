@@ -67,8 +67,8 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      value: "/in/jayloganonline",
-      href: "https://www.linkedin.com/in/jayloganonline",
+      value: "/in/jaylogandotcom",
+      href: "https://www.linkedin.com/in/jaylogandotcom",
       color: "hover:text-blue-600",
       bg: "hover:bg-blue-600/10"
     },
@@ -99,7 +99,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
+    <section className="py-24 pb-32 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
