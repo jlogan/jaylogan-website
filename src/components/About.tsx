@@ -56,22 +56,18 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-6 justify-center">
+          <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-8 justify-center">
             <div className="text-center">
-              <div className="text-3xl mb-2">🎯</div>
-              <p className="text-sm text-muted-foreground">Problem Solver</p>
+              <p className="text-sm text-muted-foreground font-medium">Problem Solver</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-2">💡</div>
-              <p className="text-sm text-muted-foreground">Innovator</p>
+              <p className="text-sm text-muted-foreground font-medium">Innovator</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-2">🤝</div>
-              <p className="text-sm text-muted-foreground">Team Player</p>
+              <p className="text-sm text-muted-foreground font-medium">Team Player</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-2">⚡</div>
-              <p className="text-sm text-muted-foreground">Fast Learner</p>
+              <p className="text-sm text-muted-foreground font-medium">Fast Learner</p>
             </div>
           </div>
         </motion.div>
