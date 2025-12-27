@@ -56,20 +56,6 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-8 justify-center">
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground font-medium">Problem Solver</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground font-medium">Innovator</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground font-medium">Team Player</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground font-medium">Fast Learner</p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
