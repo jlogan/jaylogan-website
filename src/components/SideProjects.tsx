@@ -31,6 +31,14 @@ const projects: Project[] = [
     technologies: ["React Native", "Stripe", "Node.js", "AWS"]
   },
   {
+    name: "Check To Check",
+    link: "https://checktocheck.app",
+    summary: "A personal finance management tool for tracking payments, bills, and payroll allocation.",
+    problem: "After managing personal finances using a Google Sheet for over 15 years, there was a need for a cleaner way to track payments and monitor bills. Spreadsheets worked, but as a database-focused developer, a more structured approach was needed.",
+    solution: "Check To Check was built to provide a collaborative finance management tool. It allows working directly with an accountant who can log in and help allocate payroll to the necessary bills and accounts, making personal finance management more organized and transparent.",
+    technologies: ["React", "Supabase"]
+  },
+  {
     name: "brogrammers.agency",
     link: "https://brogrammers.agency",
     summary: "A small digital agency created to scale freelance work and train new developers and project managers.",
