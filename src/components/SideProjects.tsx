@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Project {
   name: string;
@@ -160,8 +167,6 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 };
 
 const SideProjects = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-8">
@@ -183,17 +188,25 @@ const SideProjects = () => {
           </p>
         </motion.div>
 
-        {/* Desktop: Horizontal Slider */}
+        {/* Desktop: Carousel with Arrows */}
         <div className="hidden md:block">
-          <div
-            ref={scrollRef}
-            className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-track-transparent scrollbar-thumb-border/50 hover:scrollbar-thumb-border"
-            style={{ scrollbarWidth: 'thin' }}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
           >
-            {projects.map((project, index) => (
-              <ProjectCard key={project.name} project={project} index={index} />
-            ))}
-          </div>
+            <CarouselContent className="-ml-4">
+              {projects.map((project, index) => (
+                <CarouselItem key={project.name} className="pl-4 basis-1/3">
+                  <ProjectCard project={project} index={index} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -translate-x-1/2" />
+            <CarouselNext className="right-0 translate-x-1/2" />
+          </Carousel>
         </div>
 
         {/* Mobile: Stacked Cards */}
