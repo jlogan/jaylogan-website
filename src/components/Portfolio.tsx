@@ -143,7 +143,7 @@ const Portfolio = () => {
             Latest <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my 8 most recent projects that I'm able to share
+            Here are a few open-source projects that I'm able to share
           </p>
         </motion.div>
 
