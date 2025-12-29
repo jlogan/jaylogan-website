@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Sparkles, Smile } from "lucide-react";
+import { ExternalLink, Github, Sparkles, Smile, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -140,11 +140,21 @@ const Portfolio = () => {
             <span className="text-sm font-semibold text-accent uppercase tracking-wider">Portfolio</span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Latest <span className="gradient-text">Projects</span>
+            Development & <span className="gradient-text">Design</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Here are a few open-source projects that I'm able to share
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
+            Below you'll find my development work with links to GitHub repositories, and my UI/UX design portfolio on Dribbble.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Github className="w-4 h-4" />
+              <span>GitHub links show my code</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Palette className="w-4 h-4" />
+              <span>Dribbble shows my design work</span>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -274,6 +284,50 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Design Portfolio Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-card border border-border rounded-xl p-8 md:p-12 shadow-premium">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="inline-block mb-4"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 flex items-center justify-center mx-auto mb-4">
+                <Palette className="w-8 h-8 text-pink-500" />
+              </div>
+            </motion.div>
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">
+              UI/UX Design Portfolio
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Explore my design work including user interfaces, wireframes, and design systems. 
+              See how I approach user experience and visual design.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold group/btn"
+                onClick={() => window.open('https://dribbble.com/jaylogan', '_blank')}
+              >
+                <Palette className="w-5 h-5 mr-2 group-hover/btn:rotate-12 transition-transform" />
+                View Design Work on Dribbble
+                <ExternalLink className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+              </Button>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Friendly Modal for JayLogan.com */}
