@@ -125,10 +125,10 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group border-primary/50 hover:bg-primary/10 hover:border-primary"
+                className="group border-primary/50 hover:bg-primary/20 hover:border-primary hover:text-primary hover:scale-105 transition-all"
                 onClick={() => navigate('/resume')}
               >
-                <FileText className="mr-2 h-5 w-5" />
+                <FileText className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 View Resume
               </Button>
             </motion.div>
