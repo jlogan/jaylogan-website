@@ -23,7 +23,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "pymu.app",
+    name: "pymu",
     link: "https://pymu.app",
     summary: "A mobile app for pooling money, tracking contributions, and distributing payouts transparently.",
     problem: "Planning group trips and managing shared expenses was frustrating and unreliable. Collecting money from family or friends required constant reminders, manual tracking, and trust that everyone paid their share. Paying out winners for fantasy football leagues had the same issue: tracking contributions and sending payouts manually.",
@@ -39,28 +39,28 @@ const projects: Project[] = [
     technologies: ["React", "Supabase"]
   },
   {
-    name: "brogrammers.agency",
+    name: "Brogrammers Agency",
     link: "https://brogrammers.agency",
     summary: "A small digital agency created to scale freelance work and train new developers and project managers.",
     problem: "Freelance demand grew beyond what one person could realistically manage. At the same time, there was a need to train a family member in real-world digital skills without sacrificing client quality or professionalism.",
     solution: "brogrammers.agency was created as a structured agency environment where work could be systematized, clients could be served consistently, and new team members could be trained using real projects, tools, and processes."
   },
   {
-    name: "essistants.agency",
+    name: "Essistants Agency",
     link: "https://essistants.agency",
     summary: "A virtual assistant training and placement service built to support growing digital agencies.",
     problem: "As brogrammers.agency scaled, administrative work became a bottleneck. Hiring reliable, trained assistants was difficult, and onboarding took significant time away from billable work.",
     solution: "essistants.agency started with a single assistant and evolved into a structured training and placement service. Today, agencies pay for dedicated, trained resources who integrate directly into their existing workflows and tools."
   },
   {
-    name: "theluxuryescapemanila.com",
+    name: "The Luxury Escape",
     link: "https://theluxuryescapemanila.com",
     summary: "A small portfolio of short-term rentals that double as workspaces for distributed teams.",
     problem: "Frequent travel to the Philippines for recruiting and training created a need for reliable housing and backup workspaces. Local weather and infrastructure issues also meant team members occasionally needed safe, stable places to work.",
     solution: "A set of condos was acquired to support team travel and provide temporary workspaces. When not in use for training or operations, the units are listed as short-term rentals. The website exists to showcase and manage these properties."
   },
   {
-    name: "gojolo.io",
+    name: "JoloCRM",
     link: "https://gojolo.io",
     summary: "A custom-built, multi-tenant CRM and operations platform designed around real agency workflows.",
     problem: "Running multiple agencies required juggling too many SaaS tools for CRM, project management, invoicing, sales pipelines, customer support, and internal communication. Costs and complexity kept increasing, and none of the tools matched how work was actually being done.",
@@ -68,7 +68,7 @@ const projects: Project[] = [
     technologies: ["Laravel", "Vue", "PostgreSQL", "Email and calendar integrations"]
   },
   {
-    name: "linksforb.io",
+    name: "Links For Bio",
     link: "https://linksforb.io",
     summary: "A lightweight, free link-in-bio tool with centralized management and click tracking.",
     problem: "Clients needed simple \"link in bio\" pages for social media, but managing updates and tracking performance across tools was inefficient. Existing solutions were either overkill or difficult to manage at scale.",
