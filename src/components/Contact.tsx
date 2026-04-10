@@ -19,8 +19,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Call / SMS",
-      value: "425-475-2370",
-      href: "tel:4254752370",
+      value: "404-926-6429",
+      href: "tel:4049266429",
       color: "hover:text-green-500",
       bg: "hover:bg-green-500/10"
     },
