@@ -126,6 +126,17 @@ const Resume = () => {
 
             {[
               {
+                role: "Director of Web Development",
+                company: "Stuff You Can Use",
+                location: "Remote",
+                period: "2021 – 2026",
+                achievements: [
+                  "Led development for 10+ digital products, including full-stack apps used by thousands of educators, ensuring scalable architecture and performant user experience.",
+                  "Coordinated a team of up to 30 developers, improving sprint velocity through refined Git workflows and collaborative coding practices.",
+                  "Delivered data-driven features and dashboards by designing APIs, analytics workflows, and component-based UIs across the product ecosystem."
+                ]
+              },
+              {
                 role: "Web Developer – State of Georgia",
                 company: "Administrative Office of the Courts",
                 location: "Atlanta, GA",
@@ -134,17 +145,6 @@ const Resume = () => {
                   "Maintained and improved 15+ WordPress sites, building custom themes, plugins, and dynamic Gutenberg blocks to support internal teams and judicial stakeholders.",
                   "Designed and launched the agency’s first CI/CD pipeline for WordPress sites using AWS ECR/ECS and GitHub, reducing deployment time and eliminating manual release errors.",
                   "Modernized legacy sites by implementing component-driven UI patterns, stronger security practices, and performance optimizations across the entire multisite network."
-                ]
-              },
-              {
-                role: "Director of Web Development",
-                company: "Stuff You Can Use",
-                location: "Remote",
-                period: "2021 – 2025",
-                achievements: [
-                  "Led development for 10+ digital products, including full-stack apps used by thousands of educators, ensuring scalable architecture and performant user experience.",
-                  "Coordinated a team of up to 30 developers, improving sprint velocity through refined Git workflows and collaborative coding practices.",
-                  "Delivered data-driven features and dashboards by designing APIs, analytics workflows, and component-based UIs across the product ecosystem."
                 ]
               },
               {
