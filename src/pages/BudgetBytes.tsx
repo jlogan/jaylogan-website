@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BarChart3,
   Check,
+  ChevronLeft,
   Clock,
   DollarSign,
   ListChecks,
