@@ -140,7 +140,7 @@ const RapidMedia = () => {
         <div className="relative mx-auto grid max-w-6xl gap-10 lg:min-h-[700px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-cyan-100">
-              <Sparkles className="h-4 w-4" /> Sample Product Owner Exercise
+              <Sparkles className="h-4 w-4" /> Site Renewal Recommendations
             </div>
             <h1 className="font-display text-4xl leading-tight text-white sm:text-6xl lg:text-7xl">
               Rapid Media site renewal recommendations
