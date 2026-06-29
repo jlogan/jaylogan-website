@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
+import GoogleTagManagerPageView from "./components/GoogleTagManagerPageView";
 import Resume from "./pages/Resume";
 import BudgetBytes from "./pages/BudgetBytes";
 import RapidMedia from "./pages/RapidMedia";
@@ -19,6 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <GoogleTagManagerPageView />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/resume" element={<Resume />} />
