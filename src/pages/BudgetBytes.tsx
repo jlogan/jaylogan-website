@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   BarChart3,
@@ -86,7 +87,7 @@ const BudgetBytes = () => {
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 lg:min-h-[680px] lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-200">
-              <Sparkles className="h-4 w-4" /> Phase 2 Product Owner Exercise
+              <Sparkles className="h-4 w-4" /> Sample Product Owner Exercise
             </div>
             <h1 className="font-display text-4xl leading-tight text-white sm:text-6xl lg:text-7xl">
               Budget Bytes mobile engagement audit
@@ -248,6 +249,15 @@ const BudgetBytes = () => {
           <p className="mt-6 text-sm text-orange-50/50">
             Concept exercise by Jay Logan. Not affiliated with Budget Bytes; Budget Bytes recipe titles and links are used only as research references.
           </p>
+          <div className="mt-8 flex justify-center border-t border-white/10 pt-8">
+            <Link
+              to="/"
+              className="group inline-flex items-center gap-2 rounded-full border border-orange-300/30 bg-orange-300/10 px-6 py-3 text-sm font-bold text-orange-100 transition hover:border-orange-300/50 hover:bg-orange-300/20 hover:text-white"
+            >
+              Prepared By Jay Logan
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </section>
     </main>
