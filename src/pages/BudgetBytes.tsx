@@ -3,7 +3,6 @@ import {
   ArrowRight,
   BarChart3,
   Check,
-  ChevronLeft,
   Clock,
   DollarSign,
   ListChecks,
@@ -85,9 +84,6 @@ const BudgetBytes = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(249,115,22,.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(132,204,22,.16),transparent_28%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 lg:min-h-[680px] lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            <a href="/" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-orange-200/80 hover:text-orange-100">
-              <ChevronLeft className="h-4 w-4" /> Back to jaylogan.com
-            </a>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-200">
               <Sparkles className="h-4 w-4" /> Phase 2 Product Owner Exercise
             </div>
