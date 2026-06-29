@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 import Resume from "./pages/Resume";
 import BudgetBytes from "./pages/BudgetBytes";
+import RapidMedia from "./pages/RapidMedia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/budgetbytes" element={<BudgetBytes />} />
+          <Route path="/rapid-media" element={<RapidMedia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
