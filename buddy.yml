@@ -1,0 +1,98 @@
+# Buddy.works pipeline-as-code — https://buddy.works/docs/yaml
+#
+# Jay Logan website deploy
+# - pushes to `main` deploy the built Vite static site to jaylogan.com.
+#
+# Runtime model:
+#   Buddy builds the React/Vite app in CI, then transfers only the contents of
+#   `dist/` to the CloudPanel static document root. The server does not need
+#   Node.js or node_modules at runtime.
+#
+# One-time Buddy project setup:
+#   1. Switch the Buddy project to YAML configuration so it reads this root file.
+#   2. Add these encrypted project variables:
+#        PROD_SSH_HOST       67.205.186.58
+#        PROD_SSH_USER       jaylogan
+#        PROD_SSH_KEY        deploy SSH private key (type: SSH key, encrypted)
+#        PROD_DEPLOY_PATH    /home/jaylogan/htdocs/jaylogan.com
+#        PROD_SITE_URL       https://jaylogan.com
+#
+# CloudPanel note:
+#   This repo is a static Vite app. CloudPanel serves the built files directly
+#   from PROD_DEPLOY_PATH, with SPA fallback to index.html so routes like
+#   /resume and /budgetbytes resolve on direct page load.
+
+- pipeline: "Deploy To Production"
+  name: "Deploy To Production"
+  events:
+    - type: PUSH
+      refs:
+        - refs/heads/main
+  terminate_stale_runs: true
+  actions:
+    - action: "Build static site"
+      type: "BUILD"
+      docker_image_name: "node"
+      docker_image_tag: "22"
+      shell: "BASH"
+      execute_commands:
+        - "npm ci"
+        - "npm run build"
+        - 'test -f dist/index.html && test -d dist/assets || { echo "ERROR: expected dist/index.html and dist/assets after build"; exit 1; }'
+
+    - action: "Transfer dist to production (SFTP)"
+      type: "TRANSFER"
+      input_type: "BUILD_ARTIFACTS"
+      local_path: "/dist/"
+      remote_path: "$PROD_DEPLOY_PATH"
+      use_temporary_files: true
+      deletion_disabled: false
+      deployment_excludes:
+        - ".DS_Store"
+        - "*.map"
+      targets:
+        - target: "production-cloudpanel"
+          type: "SSH"
+          name: "CloudPanel Production"
+          host: "$PROD_SSH_HOST"
+          port: "22"
+          path: "$PROD_DEPLOY_PATH"
+          auth:
+            method: "SSH_KEY"
+            username: "$PROD_SSH_USER"
+            key: "$PROD_SSH_KEY"
+
+    - action: "Verify production site"
+      type: "SSH_COMMAND"
+      shell: "BASH"
+      run_as_script: true
+      working_directory: "$PROD_DEPLOY_PATH"
+      commands: |-
+        set -euo pipefail
+        cd "$PROD_DEPLOY_PATH"
+        test -f index.html || { echo "ERROR: index.html missing in $PROD_DEPLOY_PATH"; exit 1; }
+        test -d assets || { echo "ERROR: assets directory missing in $PROD_DEPLOY_PATH"; exit 1; }
+        chmod -R u+rwX,go+rX .
+
+        SITE_URL="${PROD_SITE_URL:-https://jaylogan.com}"
+        for i in $(seq 1 20); do
+          if curl -fsS -I --connect-timeout 3 --max-time 10 "$SITE_URL/" >/dev/null; then
+            echo "Production health check passed after ${i}s: $SITE_URL/"
+            exit 0
+          fi
+          sleep 2
+        done
+
+        echo "Production health check failed: $SITE_URL/"
+        exit 1
+      targets:
+        - target: "production-cloudpanel"
+          type: "SSH"
+          name: "CloudPanel Production"
+          host: "$PROD_SSH_HOST"
+          port: "22"
+          path: "$PROD_DEPLOY_PATH"
+          auth:
+            method: "SSH_KEY"
+            username: "$PROD_SSH_USER"
+            key: "$PROD_SSH_KEY"
