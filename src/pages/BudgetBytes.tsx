@@ -94,6 +94,23 @@ const BudgetBytes = () => {
             <p className="mt-6 text-lg leading-8 text-orange-50/78 sm:text-xl">
               A practical product case study: three engagement improvements for recipe readers, plus a mobile A/B-test concept for a focused cooking mode.
             </p>
+            <div className="mt-8 rounded-[1.75rem] border border-lime-300/20 bg-lime-300/[0.07] p-5 shadow-2xl backdrop-blur sm:p-6">
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-lime-200">The Ask</p>
+              <ol className="mt-4 space-y-3 text-orange-50/85">
+                {[
+                  "Browse Budget Bytes recipe posts and assess the mobile cooking experience.",
+                  "Identify the top 3 engagement improvements for recipe readers.",
+                  "Design a mobile mock-up and/or A/B testing idea to validate one improvement.",
+                ].map((item, index) => (
+                  <li key={item} className="flex gap-3 leading-7">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-lime-300/30 bg-lime-300/10 text-xs font-black text-lime-100">
+                      {index + 1}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {[
                 ["Research lens", "Mobile recipe posts"],
